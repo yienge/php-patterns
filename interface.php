@@ -1,7 +1,11 @@
 <?php
 /*
- * Use interface to implement card reader standard
+ * Use interface to implement card reader standard, and give two ways to check
+ * if a class implements specific interface
  */
+function if_implement($class, $interface) {
+    return in_array($interface, class_implements(get_class($class))) ? TRUE : FALSE;
+}
 
 interface card_reader {
     public function get_data_from_device();
@@ -44,4 +48,6 @@ if ($if_implements) {
     $data = $mini_sd_card->get_data_from_device($mini_sd_card);
 }
 echo $data;
+
+var_dump(if_implement($mini_sd_card, 'card_reader')) . "\n";
 ?>
