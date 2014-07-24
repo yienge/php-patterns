@@ -1,4 +1,8 @@
 <?php
+/*
+ * Use facade pattern to control many class to gather infos
+ */
+
 interface base_component {
     public function get_info();
 }
