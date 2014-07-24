@@ -1,7 +1,7 @@
 <?php
 /*
- * Use interface to implement card reader standard, and give two ways to check
- * if a class implements specific interface
+ * Bridge pattern : use interface to implement card reader standard,
+ * and give two ways to check if a class implements specific interface.
  */
 function if_implement($class, $interface) {
     return in_array($interface, class_implements(get_class($class))) ? TRUE : FALSE;
