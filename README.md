@@ -8,3 +8,4 @@ design patterns in PHP
 * facade
 * bridge
 * observer
+* proxy
