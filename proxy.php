@@ -1,7 +1,7 @@
 <?php
 /*
- * Bridge pattern : use interface to implement card reader standard,
- * and give two ways to check if a class implements specific interface.
+ * Proxy pattern : image_proxy can delay image loading & count image
+ * reference & get image domain
  */
 class image {
     private $filename = '';
@@ -15,7 +15,7 @@ class image {
     }
 }
 
-class image_draw_count_proxy {
+class image_proxy {
 
     private $area_code = '';
     private $image_domain = '';
@@ -67,7 +67,7 @@ class App {
 
     public function __construct($image_paths = array()) {
         foreach($image_paths as $image_path) {
-            $this->images[] = new image_draw_count_proxy($image_path);
+            $this->images[] = new image_proxy($image_path);
         }
     }
 
