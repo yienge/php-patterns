@@ -133,6 +133,8 @@ http://openhome.cc/Gossip/DesignPattern/StrategyPattern.htm
 在抽象父類別中(用abstract class)定義好需要用到的變數和方法，但是因為實作細節不清楚，
 所以留待子類別去實作。可有效規範子類別的介面，確保該有的函數都有。
 父類別定義骨架，子類別定義實作。
+比如說某個網頁的controller主要處理流程是固定的，但是實際的get和post做的事情卻不大相同，
+那就可以在父類別裡面定義主要流程，詳細細節留給子類別去定義。
 
 http://openhome.cc/Gossip/DesignPattern/TemplateMethod.htm
 
