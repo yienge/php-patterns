@@ -17,18 +17,40 @@ class image {
 
 class image_draw_count_proxy {
 
+    private $area_code = '';
+    private $image_domain = '';
     private $image    = null;
     private $filename = null;
     private $count    = 0;
 
     public function __construct($filename) {
+        $this->area_code = $this->get_area_code();
+        $this->image_domain = $this->get_image_domain();
         $this->filename = $filename;
         $this->count = 0;
     }
 
+    private function get_area_code() {
+        return 'us-east';
+    }
+
+    private function get_image_domain() {
+        switch ($this->area_code) {
+            case 'us-east':
+                return 'img.example.com/us-east';
+                break;
+            case 'us-west':
+                return 'img.example.com/us-east';
+                break;
+            default:
+                return 'img.example.com/tw';
+                break;
+        }
+    }
+
     public function draw() {
         if (!$this->image) {
-            $this->image = new image($this->filename);
+            $this->image = new image($this->image_domain . $this->filename);
         }
         $this->image->draw();
         $this->count++;
@@ -58,8 +80,8 @@ class App {
 }
 
 $image_arr = array(
-    '/var/www/image/12345',
-    '/var/www/image/23456',
+    '/shop/banner/30x30/12345.jpg',
+    '/shop/banner/30x30/23456.jpg',
 );
 $app = new App($image_arr);
 $app->display();
