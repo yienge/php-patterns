@@ -96,8 +96,10 @@ http://openhome.cc/Gossip/DesignPattern/FacadePattern.htm
 
 就是給什麼東西加上個外接的東西，讓他的結果會變不一樣。比如說在輸出的結果加上另外一個物件去做處理，那這另外加的物件就是個decorator。
 ```
-ls -al | grep 'hello' 這個就是在ls的結果上加上一個grep的東西去做處理，
+ls -al | grep 'hello' 
 ```
+這個就是在ls的結果上加上一個grep的東西去做處理，
+
 如此一來輸出就是只會含有hello的結果。裝飾類和被裝飾類會使用同樣的interface去實作，如果有需要裝飾的功能，就呼叫被裝飾過的class，如果不需要的話就呼叫原本的class，因為是在要使用的時候才呼叫，所以可以在運作的時候才決定是否需要這功能。Python中在函數前加個@decorator的功能即是decorator pattern的典範
 
 http://openhome.cc/Gossip/DesignPattern/DecoratorPattern.htm
