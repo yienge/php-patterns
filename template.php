@@ -1,7 +1,7 @@
 <?php
 /*
- * Proxy pattern : image_proxy can delay image loading & count image
- * reference & get image domain
+ * Template pattern : define the main process in superclass, then implements
+ * all details in the subclass.
  */
 class web_page_controller {
 
