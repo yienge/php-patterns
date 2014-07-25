@@ -1,14 +1,7 @@
-php-patterns
+PHP-patterns
 ============
 
-design patterns in PHP
-
-* singleton
-* adapter
-* facade
-* bridge
-* observer
-* proxy
+Design patterns in PHP
 
 ## 參考網頁
 
