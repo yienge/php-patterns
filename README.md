@@ -114,3 +114,58 @@ http://openhome.cc/Gossip/DesignPattern/DecoratorPattern.htm
 4. 參考代理：在存取物件或資料時，記錄存取的次數或被參考的次數
 
 http://openhome.cc/Gossip/DesignPattern/ProxyPattern.htm
+
+
+## Behavioral patterns 行為模式
+
+### Strategy pattern 策略模式
+
+類似Delegate mode，但是你可以選擇使用哪一種方法，
+class A會使用不同的class(實作)去做同一件事情，但是它可以選擇使用哪一種演算法實作，
+不像委託模式的地方在於，委託模式會自己決定該用哪一種方法。
+主要精神在於服務細節或演算流程的封裝，將服務或演算法封裝成一個個strategy物件，
+讓使用服務的客戶端可以依照需求去抽換演算法或服務的做法，而不用關心實作。
+
+http://openhome.cc/Gossip/DesignPattern/StrategyPattern.htm
+
+### Template method pattern 模板方法模式
+
+在抽象父類別中(用abstract class)定義好需要用到的變數和方法，但是因為實作細節不清楚，
+所以留待子類別去實作。可有效規範子類別的介面，確保該有的函數都有。
+父類別定義骨架，子類別定義實作。
+
+http://openhome.cc/Gossip/DesignPattern/TemplateMethod.htm
+
+### Observer pattern 觀察者模式 (訂閱模式)
+
+又可以叫做publisher-subscriber模式，簡單來說就是實作通知，事件觸發就會通知訂閱者。
+ex: epoll，MVC裡面controller會訂閱view裡面的事件，某個html元件被按到就通知JS做什麼事情。 
+
+http://openhome.cc/Gossip/DesignPattern/ObserverPattern.htm
+
+### Command pattern 命令模式
+
+把動作當成是一個物件，於是一個物件就表示一個動作(或者是稱作命令)，
+命令物件可以把行動和參數封裝起來，這些動作可以被執行多次，或者是取消，然後再重做。
+用命令模式來實作的功能有：交易行為、進度列、精靈、巨集收錄。
+這個模式等於是把你的功能做成一個可接受外掛的介面，
+可以讓使用者自訂他們要組合的基本功能。
+你只提供增加指令，和執行指令的介面給他們。
+主要精神在於將指令的建立和執行分開，在於將建立的部分切割出去。
+
+ex: http://openhome.cc/Gossip/DesignPattern/CommandPattern.htm
+
+### Chain of respondsibility pattern 責任鏈模式
+
+exception的處理就是pattern的實作，如果我丟出的exception不是在這層該處理，那就是更外層的會去處理。
+但是記得不要丟太遠，不然也不好處理。 
+這個模式的重點就在於職責的傳遞，當一個handler無法處理或者不該輪他處理的情況下，
+就傳給下一個handler。
+
+http://openhome.cc/Gossip/DesignPattern/ChainofResponsibility.htm
+
+### Delegate pattern 委託模式
+
+就是A要做某件事情，但是他會叫class B去幫它做，但是class B其實是叫class C去做，
+但是class B也可以選擇叫class D去做，委託模式會使用聚合來代替繼承，
+如果還要新增方法的話，可以在class B中新增class E的實作。
