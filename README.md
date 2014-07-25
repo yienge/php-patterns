@@ -153,7 +153,7 @@ http://openhome.cc/Gossip/DesignPattern/ObserverPattern.htm
 你只提供增加指令，和執行指令的介面給他們。
 主要精神在於將指令的建立和執行分開，在於將建立的部分切割出去。
 
-ex: http://openhome.cc/Gossip/DesignPattern/CommandPattern.htm
+http://openhome.cc/Gossip/DesignPattern/CommandPattern.htm
 
 ### Chain of respondsibility pattern 責任鏈模式
 
