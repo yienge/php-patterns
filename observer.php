@@ -26,20 +26,22 @@ class subject implements I_subject {
 
     public function update_observer($msg) {
         foreach($this->observers as $observer) {
-            $observer->update($msg);
+            if ($observer) {
+                $observer->update($msg);
+            }
         }
     }
 }
 
 class observer_1 implements I_observer {
     public function update($msg) {
-        echo 'I got the msg: ' . $msg . ', and I will do something.' . "\n";
+        echo __CLASS__ . ' I got the msg: ' . $msg . ', and I will do something.' . "\n";
     }
 }
 
 class observer_2 implements I_observer {
     public function update($msg) {
-        echo 'I got the msg: ' . $msg . ', and I will do something.' . "\n";
+        echo __CLASS__ . ' I got the msg: ' . $msg . ', and I will do something.' . "\n";
     }
 
     public function do_nothing() {
@@ -49,8 +51,11 @@ class observer_2 implements I_observer {
 
 $subject = new subject();
 $observer1 = new observer_1();
+$observer2 = new observer_2();
 $subject->register_observer($observer1);
+$subject->register_observer($observer2);
 $subject->update_observer('we are under attack.');
 $subject->remove_observer($observer1);
+$subject->remove_observer($observer2);
 $subject->update_observer('we are under attack.');
 ?>
