@@ -5,8 +5,10 @@ Design patterns in PHP
 
 ## 前言
 
-design patterns 只是一種常見問題的解決方法整理，所以不只有下列的這些patterns，
-只要是很多人在程式開發中常常遇到的問題的解法經過彙整，都可以稱之為design pattern。
+design patterns只是常見問題的解決方法整理，所以不只有下列的這些patterns，
+只要是很多人在程式開發中常常遇到的問題的解法經過彙整，都可以稱之為design patterns。
+design patterns是工程師間觀念溝通的一種工具，常見的design patterns只要講出名稱，
+就可以快速地讓對方了解你想要怎麼做。
 
 ## 參考網頁
 
