@@ -5,10 +5,9 @@ Design patterns in PHP
 
 ## 前言
 
-design patterns只是常見問題的解決方法整理，所以不只有下列的這些patterns，
-只要是很多人在程式開發中常常遇到的問題的解法經過彙整，都可以稱之為design patterns。
-design patterns是工程師間觀念溝通的一種工具，常見的design patterns只要講出名稱，
-就可以快速地讓對方了解你想要怎麼做。
+* design patterns只是常見問題的解決方法整理，所以不會只有下列的這些patterns，只要是很多人在程式開發中常常遇到的問題的解法經過彙整，都可以稱之為design patterns。
+* design patterns是工程師間觀念溝通的一種工具，常見的design patterns只要講出名稱，就可以快速地讓對方了解你想要怎麼做。
+* design patterns 是一種設計觀念，描述一個或多個物件的行為或是互動的方式，所以無關乎實作的語言。可以說每一種語言都可以實作出design patterns所要表達的觀念。
 
 ## 參考網頁
 
@@ -71,6 +70,14 @@ http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
 ### Director-builder pattern 指導者-建造者模式
 
 Director實作建造的流程，builder就負責用不同材料做出產品，是builder模式的進階版本。
+
+### Object-pool pattern 物件池模式
+
+一個物件池是一組已經初始化過且可以使用的物件，而可以不用在有需求時創建和銷毀物件。
+在一個物件頻繁地被建立以及銷毀且建立的時間花費巨大的時候，使用這個設計模式可以得到顯著的效能提昇。
+池的用戶可以從池子中取得對象，對其進行操作處理，並在不需要時歸還給池子而非銷毀。這是一種特殊的工廠物件。
+若初始化、實例化的代價高，且有需求需要經常實例化，但每次實例化的數量較少的情況下，使用對象池可以獲得顯著的效能提升。
+從池子中取得對象的時間是可預測的，但新建一個實例所需的時間是不確定。
 
 ## Structural patterns 結構模式：
 
