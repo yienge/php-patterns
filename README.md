@@ -51,6 +51,8 @@ http://openhome.cc/Gossip/DesignPattern/SimpleFactory.htm
 factory模式和abstract factory模式的差異在於，產出的東西，factory模式產出的東西都一樣，它的class就是都產生出一模一樣的東西，所以叫做工廠。
 至於abstract factory，它會產生出同系列的東西，但是屬性上會有所不同，或者可以說是規格上有所不同。
 比如說都是一樣的記憶體，但是容量卻有1GB或2GB或4GB，但是本質和使用方法上是一樣的。
+abstract factory的abstract並不是一般物件導向的關鍵字abstract，而是指說它是種只提供零件的抽象工廠，abstract factory都會定義get_parts()之類的方法，
+然後再建立物件的時候呼叫抽象工廠的get_parts()去把物件組合出來。
 
 http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
 
