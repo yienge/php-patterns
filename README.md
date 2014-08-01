@@ -25,7 +25,8 @@ Python Design Patterns
 
 ## Creational patterns 建造模式
 
-工廠的概念用在很多設計模式上，例如 工廠模式(factory)、抽象工廠模式(abstract factory)、建造者模式(builder)、單一存在模式(singleton)都有用到工廠"方法”模式表示，工廠的概念不一定會是一個class，有可能是一個靜態方法，定義好的建立步驟。下列情況可以考慮使用工廠方法
+工廠的概念用在很多設計模式上，例如 工廠模式(factory)、抽象工廠模式(abstract factory)、建造者模式(builder)、單一存在模式(singleton)都有用到工廠"方法”模式表示，
+工廠的概念不一定會是一個class，有可能是一個靜態方法，定義好的建立步驟。下列情況可以考慮使用工廠方法
 
 * 建立物件需要大量重複的代碼。
 * 建立物件需要存取某些訊息，而這些訊息不應該包含在複合類中。
@@ -35,13 +36,21 @@ Python Design Patterns
 
 ### Simple factory pattern 工廠模式
 
-工廠模式，當一個物件的產生需要很多步驟，而且這些步驟的細節你並沒有很想知道，就把這些細節包進工廠裡面，讓工廠幫你處理，而你只要new這個class就可以得到你要的東西，就像是工廠把產品生產好給你一樣。若是需要根據輸入來決定要產生何種產品的話，也可以讓輸入的參數代入factory method裡面。產生出的產品 必然會符合他該有的功能(在物件中就是代表他一定會有interface說好的method)
+工廠模式，當一個物件的產生需要很多步驟，而且這些步驟的細節你並沒有很想知道，就把這些細節包進工廠裡面，
+讓工廠幫你處理，而你只要new這個class就可以得到你要的東西，就像是工廠把產品生產好給你一樣。
+若是需要根據輸入來決定要產生何種產品的話，也可以讓輸入的參數代入factory method裡面。
+產生出的產品 必然會符合他該有的功能(在物件中就是代表他一定會有interface說好的method)
+和facade模式很像的地方在於都是將複雜度封裝起來，facade是封裝使用方式，factory是封裝建立物件的流程。
 
 http://openhome.cc/Gossip/DesignPattern/SimpleFactory.htm
 
 ### Abstract factory pattern 抽象工廠模式
 
-建立一組相同主題但是屬性有所不同的class，比如說建立正式員工和派遣員工和工讀生的class，他們都會擁有共同屬性，但是可能屬性值不一樣，比如說工讀生工作時間可能是4小時，正式員工是八小時，薪水可能也會有差，等等的。factory模式和abstract factory模式的差異在於，產出的東西，factory模式產出的東西都一樣，它的class就是都產生出一模一樣的東西，所以叫做工廠。那abstract factory勒，它會產生出同系列的東西，但是屬性上會有所不同，或者可以說是規格上有所不同。比如說都是一樣的記憶體，但是容量卻有1GB或2GB或4GB，但是本質上是一樣的。
+建立一組相同主題但是屬性有所不同的class，比如說建立正式員工和派遣員工和工讀生的class，
+他們都會擁有共同屬性，但是可能屬性值不一樣，比如說工讀生工作時間可能是4小時，正式員工是八小時，薪水可能也會有差，等等的。
+factory模式和abstract factory模式的差異在於，產出的東西，factory模式產出的東西都一樣，它的class就是都產生出一模一樣的東西，所以叫做工廠。
+至於abstract factory，它會產生出同系列的東西，但是屬性上會有所不同，或者可以說是規格上有所不同。
+比如說都是一樣的記憶體，但是容量卻有1GB或2GB或4GB，但是本質和使用方法上是一樣的。
 
 http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
 
@@ -79,7 +88,7 @@ Director實作建造的流程，builder就負責用不同材料做出產品，�
 若初始化、實例化的代價高，且有需求需要經常實例化，但每次實例化的數量較少的情況下，使用對象池可以獲得顯著的效能提升。
 從池子中取得對象的時間是可預測的，但新建一個實例所需的時間是不確定。
 
-## Structural patterns 結構模式：
+## Structural patterns 結構模式
 
 ### Adapter pattern 轉接器模式
 
@@ -111,7 +120,7 @@ ls -al | grep 'hello'
 
 http://openhome.cc/Gossip/DesignPattern/DecoratorPattern.htm
 
-### Proxy pattern 代理模式：
+### Proxy pattern 代理模式
 
 就是你沒有權限，或者不該是你做的事情，就交給對應的窗口去處理，比如說你打去查號台，想查某個特殊的號碼，那就是你讓查號台當你的代理人。 代理依照功能也會有各種不同的代理，
 
