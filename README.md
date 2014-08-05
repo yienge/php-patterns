@@ -69,6 +69,8 @@ http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
 (在php中可用array代替，key值可以用參數去做編碼)
 通常用在產生物件花費時間很久的情況下，可以將物件產生的花費給省下來。
 
+http://en.wikipedia.org/wiki/Lazy_initialization
+
 ### Prototype pattern 原型模式
 
 在產生一個object花費的代價太高，而且沒有重新產生一次的必要性，就可以使用這個模式。
@@ -98,6 +100,8 @@ http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
 池的用戶可以從池子中取得對象，對其進行操作處理，並在不需要時歸還給池子而非銷毀。這是一種特殊的工廠物件。
 若初始化、實例化的代價高，且有需求需要經常實例化，但每次實例化的數量較少的情況下，使用對象池可以獲得顯著的效能提升。
 從池子中取得對象的時間是可預測的，但新建一個實例所需的時間是不確定。
+
+http://en.wikipedia.org/wiki/Object_pool_pattern
 
 ## Structural patterns 結構模式
 
@@ -213,3 +217,5 @@ http://openhome.cc/Gossip/DesignPattern/ChainofResponsibility.htm
 就是A要做某件事情，但是他會叫class B去幫它做，但是class B其實是叫class C去做，
 但是class B也可以選擇叫class D去做，委託模式會使用聚合來代替繼承，
 如果還要新增方法的話，可以在class B中新增class E的實作。
+
+http://en.wikipedia.org/wiki/Delegation_pattern
