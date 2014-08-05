@@ -6,8 +6,12 @@ Design patterns in PHP
 ## 前言
 
 * design patterns只是常見問題的解決方法整理，所以不會只有下列的這些patterns，只要是很多人在程式開發中常常遇到的問題的解法經過彙整，都可以稱之為design patterns。
+
 * design patterns是工程師間觀念溝通的一種工具，常見的design patterns只要講出名稱，就可以快速地讓對方了解你想要怎麼做。
+
 * design patterns 是一種設計觀念，描述一個或多個物件的行為或是互動的方式，所以無關乎實作的語言。可以說每一種語言都可以實作出design patterns所要表達的觀念。
+
+* design patterns 多是從現實世界中解決問題的方法虛擬化之後得到的解法，學完之後你會發現日常生活中充斥著各種pattern，生活中各種解決事情的方法都可以是一個design pattern。
 
 ## 參考網頁
 
@@ -81,15 +85,11 @@ ex: 全域物件，一個port只能有一個程式使用，Data Access Object。
 
 http://openhome.cc/Gossip/DesignPattern/SingletonPattern.htm
 
-### Builder pattern 建造者模式
-
-待補
-
-http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
-
 ### Director-builder pattern 指導者-建造者模式
 
 Director實作建造的流程，builder就負責用不同材料做出產品，是builder模式的進階版本。
+
+http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
 
 ### Object-pool pattern 物件池模式
 
