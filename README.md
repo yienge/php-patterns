@@ -60,6 +60,11 @@ abstract factory的abstract並不是一般物件導向語言中的關鍵字abstr
 
 http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
 
+### Factory method pattern 工廠方法模式
+
+在一個抽象類別中留下建立元件的抽象方法沒有實作，而將這個實作方法留給實作此抽象類別的子類別，但是和元件相關的操作方法都是倚賴於預先定義的介面。
+也就是說抽象父類別只留下建立元件方法沒實作，其他的動作都預先定義好的這種時候就可以使用Factory Method。
+
 ### Lazy factory pattern 懶惰工廠模式
 
 大體上同工廠模式，但是差別在於不會先產生好物件，而是在被要求時才會去檢查是否有物件，如果沒有才會生產一個物件，
@@ -87,9 +92,9 @@ ex: 全域物件，一個port只能有一個程式使用，Data Access Object。
 
 http://openhome.cc/Gossip/DesignPattern/SingletonPattern.htm
 
-### Director-builder pattern 指導者-建造者模式
+### Builder pattern 建造者模式
 
-Director實作建造的流程，builder就負責用不同材料做出產品，是builder模式的進階版本。
+待補
 
 http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
 
@@ -129,11 +134,20 @@ bridge模式和adapter模式的不同在於，adapter會對輸入做轉換，轉
 
 http://openhome.cc/Gossip/DesignPattern/BridgePattern.htm
 
+### Composite pattern 組合模式
+
+待補
+
+### Flyweight pattern 小物件共用模式
+
+當程式中使用到大量的小物件時而這些物件又可能重複出現時，可以考慮用一個hash map將這些小字串存起來，下次如果還有用到一模一樣的物件時，
+就可以直接將hash map中儲存的物件回傳，而不用另外宣告一個物件，可有效減少記憶體使用。小物件有可能是字串或數字等等。
+
 ### Facade pattern 外觀(拼裝)模式
 
 將很多個API組裝在一起然後對外提供一個介面，輸入參數就可以處理好多個API，
 用以簡化操作使用。而且這樣實作就只會依賴在對外提供的那個介面而已，
-就算是要修改也只要修改那個interface就好。在一組API被多個class所呼叫時可以有效簡化API進入口。 
+就算是要修改也只要修改那個interface就好。在一組API被多個class所呼叫時可以有效簡化API進入口。
 
 http://openhome.cc/Gossip/DesignPattern/FacadePattern.htm
 

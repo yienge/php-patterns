@@ -1,4 +1,7 @@
 <?php
+/**
+ * abstract handler
+ */
 abstract class handler {
 
     protected $next_handler;
