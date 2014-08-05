@@ -201,9 +201,10 @@ http://openhome.cc/Gossip/DesignPattern/CommandPattern.htm
 
 ### Chain of respondsibility pattern 責任鏈模式
 
-exception的處理就是pattern的實作，如果我丟出的exception不是在這層該處理，那就是更外層的會去處理。
+exception的處理就是此pattern的實作，如果我丟出的exception不是在這層該處理，那就是更外層的會去處理。
 但是記得不要丟太遠，不然也不好處理。
 這個模式的重點就在於職責的傳遞，當一個handler無法處理或者不該輪他處理的情況下，就傳給下一個handler。
+handler連結的方式有點像是linked list的感覺，另外可以在每個handler加上類別判斷去決定此handler是要處理還是要bypass給下一個handler。
 
 http://openhome.cc/Gossip/DesignPattern/ChainofResponsibility.htm
 
