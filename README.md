@@ -145,7 +145,7 @@ http://openhome.cc/Gossip/DesignPattern/CompositePattern.htm
 ### Flyweight pattern 小物件共用模式
 
 當程式中使用到大量的小物件時而這些物件又可能重複出現時，可以考慮用一個hash map將這些小字串存起來，下次如果還有用到一模一樣的物件時，
-就可以直接將hash map中儲存的物件回傳，而不用另外宣告一個物件，可有效減少記憶體使用。小物件有可能是字串或數字等等。
+就可以直接將hash map中儲存的物件回傳，而不用另外宣告一個物件，可有效減少記憶體使用。小物件有可能是字串或數字等等簡單的物件。
 
 http://openhome.cc/Gossip/DesignPattern/FlyweightPattern.htm
 
