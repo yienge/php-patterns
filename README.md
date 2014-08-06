@@ -65,6 +65,8 @@ http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
 在一個抽象類別中留下建立元件的抽象方法沒有實作，而將這個實作方法留給實作此抽象類別的子類別，但是和元件相關的操作方法都是倚賴於預先定義的介面。
 也就是說抽象父類別只留下建立元件方法沒實作，其他的動作都預先定義好的這種時候就可以使用Factory Method。
 
+http://openhome.cc/Gossip/DesignPattern/FactoryMethod.htm
+
 ### Lazy factory pattern 懶惰工廠模式
 
 大體上同工廠模式，但是差別在於不會先產生好物件，而是在被要求時才會去檢查是否有物件，如果沒有才會生產一個物件，
@@ -138,10 +140,14 @@ http://openhome.cc/Gossip/DesignPattern/BridgePattern.htm
 
 待補
 
+http://openhome.cc/Gossip/DesignPattern/CompositePattern.htm
+
 ### Flyweight pattern 小物件共用模式
 
 當程式中使用到大量的小物件時而這些物件又可能重複出現時，可以考慮用一個hash map將這些小字串存起來，下次如果還有用到一模一樣的物件時，
 就可以直接將hash map中儲存的物件回傳，而不用另外宣告一個物件，可有效減少記憶體使用。小物件有可能是字串或數字等等。
+
+http://openhome.cc/Gossip/DesignPattern/FlyweightPattern.htm
 
 ### Facade pattern 外觀(拼裝)模式
 
