@@ -46,7 +46,7 @@ Python Design Patterns
 產生出的產品 必然會符合他該有的功能(在物件中就是代表他一定會有interface說好的method)
 和facade模式很像的地方在於都是將複雜度封裝起來，facade是封裝使用方式，factory是封裝建立物件的流程。
 
-http://openhome.cc/Gossip/DesignPattern/SimpleFactory.htm
+* http://openhome.cc/Gossip/DesignPattern/SimpleFactory.htm
 
 ### Abstract factory pattern 抽象工廠模式
 
@@ -58,14 +58,14 @@ factory模式和abstract factory模式的差異在於，產出的東西，factor
 abstract factory的abstract並不是一般物件導向語言中的關鍵字abstract，而是指說它是種只提供零件的抽象工廠，abstract factory都會定義get_parts()之類的方法，
 然後再建立物件的時候呼叫抽象工廠的get_parts()去把物件組合出來。
 
-http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
+* http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
 
 ### Factory method pattern 工廠方法模式
 
 在一個抽象類別中留下建立元件的抽象方法沒有實作，而將這個實作方法留給實作此抽象類別的子類別，但是和元件相關的操作方法都是倚賴於預先定義的介面。
 也就是說抽象父類別只留下建立元件方法沒實作，其他的動作都預先定義好的這種時候就可以使用Factory Method。
 
-http://openhome.cc/Gossip/DesignPattern/FactoryMethod.htm
+* http://openhome.cc/Gossip/DesignPattern/FactoryMethod.htm
 
 ### Lazy factory pattern 懶惰工廠模式
 
@@ -76,7 +76,7 @@ http://openhome.cc/Gossip/DesignPattern/FactoryMethod.htm
 (在php中可用array代替，key值可以用參數去做編碼)
 通常用在產生物件花費時間很久的情況下，可以將物件產生的花費給省下來。
 
-http://en.wikipedia.org/wiki/Lazy_initialization
+* http://en.wikipedia.org/wiki/Lazy_initialization
 
 ### Prototype pattern 原型模式
 
@@ -84,7 +84,7 @@ http://en.wikipedia.org/wiki/Lazy_initialization
 簡單來說，就是複製一個object。
 比如說 class 產生出一個新的物件後 將它存起來，然後之後再有要求要產生的時候，就複製它。
 
-http://openhome.cc/Gossip/DesignPattern/PrototypePattern.htm
+* http://openhome.cc/Gossip/DesignPattern/PrototypePattern.htm
 
 ### Singleton pattern 單一存在模式
 
@@ -92,13 +92,13 @@ http://openhome.cc/Gossip/DesignPattern/PrototypePattern.htm
 這個物件是只會有一個而已，絕對不會有第二個，全部人都共用這個物件。
 ex: 全域物件，一個port只能有一個程式使用，Data Access Object。
 
-http://openhome.cc/Gossip/DesignPattern/SingletonPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/SingletonPattern.htm
 
 ### Builder pattern 建造者模式
 
 待補
 
-http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
 
 ### Object-pool pattern 物件池模式
 
@@ -108,7 +108,7 @@ http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
 若初始化、實例化的代價高，且有需求需要經常實例化，但每次實例化的數量較少的情況下，使用對象池可以獲得顯著的效能提升。
 從池子中取得對象的時間是可預測的，但新建一個實例所需的時間是不確定。
 
-http://en.wikipedia.org/wiki/Object_pool_pattern
+* http://en.wikipedia.org/wiki/Object_pool_pattern
 
 ## Structural patterns 結構模式
 
@@ -122,7 +122,7 @@ adapter在概念上很像是decorator，但是在實作上可能會有差異，
 因為它會用一個class去對原本不相容的class去做包覆，所以class的名稱可能會因此改變，
 但是decorator是用繼承的方式，所以在名字上可能還是會保留原本的class。 
 
-http://openhome.cc/Gossip/DesignPattern/DefaultAdapter.htm
+* http://openhome.cc/Gossip/DesignPattern/DefaultAdapter.htm
 
 ### Bridge pattern 連接器模式
 
@@ -134,20 +134,20 @@ http://openhome.cc/Gossip/DesignPattern/DefaultAdapter.htm
 簡單來說 只要讓實作依賴於介面，這就是bridge mode了。
 bridge模式和adapter模式的不同在於，adapter會對輸入做轉換，轉成我們要的東西，但是bridge是列好規格讓別人符合就可以做串接。
 
-http://openhome.cc/Gossip/DesignPattern/BridgePattern.htm
+* http://openhome.cc/Gossip/DesignPattern/BridgePattern.htm
 
 ### Composite pattern 組合模式
 
 待補
 
-http://openhome.cc/Gossip/DesignPattern/CompositePattern.htm
+* http://openhome.cc/Gossip/DesignPattern/CompositePattern.htm
 
 ### Flyweight pattern 小物件共用模式
 
 當程式中使用到大量的小物件時而這些物件又可能重複出現時，可以考慮用一個hash map將這些小字串存起來，下次如果還有用到一模一樣的物件時，
 就可以直接將hash map中儲存的物件回傳，而不用另外宣告一個物件，可有效減少記憶體使用。小物件有可能是字串或數字等等簡單的物件。
 
-http://openhome.cc/Gossip/DesignPattern/FlyweightPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/FlyweightPattern.htm
 
 ### Facade pattern 外觀(拼裝)模式
 
@@ -155,7 +155,7 @@ http://openhome.cc/Gossip/DesignPattern/FlyweightPattern.htm
 用以簡化操作使用。而且這樣實作就只會依賴在對外提供的那個介面而已，
 就算是要修改也只要修改那個interface就好。在一組API被多個class所呼叫時可以有效簡化API進入口。
 
-http://openhome.cc/Gossip/DesignPattern/FacadePattern.htm
+* http://openhome.cc/Gossip/DesignPattern/FacadePattern.htm
 
 ### Decorator pattern 裝飾模式
 
@@ -169,7 +169,7 @@ ls -al | grep 'hello'
 如果不需要的話就呼叫原本的class，因為是在要使用的時候才呼叫，所以可以在運作的時候才決定是否需要這功能。
 Python中在函數前加個@decorator的功能即是decorator pattern的典範
 
-http://openhome.cc/Gossip/DesignPattern/DecoratorPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/DecoratorPattern.htm
 
 ### Proxy pattern 代理模式
 
@@ -180,7 +180,7 @@ http://openhome.cc/Gossip/DesignPattern/DecoratorPattern.htm
 3. 安全代理：用來控制物件的存取權限(類似權限控管)
 4. 參考代理：在存取物件或資料時，記錄存取的次數或被參考的次數
 
-http://openhome.cc/Gossip/DesignPattern/ProxyPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/ProxyPattern.htm
 
 ## Behavioral patterns 行為模式
 
@@ -192,7 +192,7 @@ class A會使用不同的class(實作)去做同一件事情，但是它可以選
 主要精神在於服務細節或演算流程的封裝，將服務或演算法封裝成一個個strategy物件，
 讓使用服務的客戶端可以依照需求去抽換演算法或服務的做法，而不用關心實作。
 
-http://openhome.cc/Gossip/DesignPattern/StrategyPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/StrategyPattern.htm
 
 ### Template method pattern 模板方法模式
 
@@ -202,14 +202,14 @@ http://openhome.cc/Gossip/DesignPattern/StrategyPattern.htm
 比如說某個網頁的controller主要處理流程是固定的，但是實際的get和post做的事情卻不大相同，
 那就可以在父類別裡面定義主要流程，詳細細節留給子類別去定義。
 
-http://openhome.cc/Gossip/DesignPattern/TemplateMethod.htm
+* http://openhome.cc/Gossip/DesignPattern/TemplateMethod.htm
 
 ### Observer pattern 觀察者模式 (訂閱模式)
 
 又可以叫做publisher-subscriber模式，簡單來說就是實作通知，事件觸發就會通知訂閱者。
 ex: epoll，MVC裡面controller會訂閱view裡面的事件，某個html元件被按到就通知JS做什麼事情。 
 
-http://openhome.cc/Gossip/DesignPattern/ObserverPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/ObserverPattern.htm
 
 ### Command pattern 命令模式
 
@@ -221,7 +221,7 @@ http://openhome.cc/Gossip/DesignPattern/ObserverPattern.htm
 你只提供增加指令，和執行指令的介面給他們。
 主要精神在於將指令的建立和執行分開，在於將建立的部分切割出去。
 
-http://openhome.cc/Gossip/DesignPattern/CommandPattern.htm
+* http://openhome.cc/Gossip/DesignPattern/CommandPattern.htm
 
 ### Chain of respondsibility pattern 責任鏈模式
 
@@ -230,7 +230,7 @@ exception的處理就是此pattern的實作，如果我丟出的exception不是�
 這個模式的重點就在於職責的傳遞，當一個handler無法處理或者不該輪他處理的情況下，就傳給下一個handler。
 handler連結的方式有點像是linked list的感覺，另外可以在每個handler加上類別判斷去決定此handler是要處理還是要bypass給下一個handler。
 
-http://openhome.cc/Gossip/DesignPattern/ChainofResponsibility.htm
+* http://openhome.cc/Gossip/DesignPattern/ChainofResponsibility.htm
 
 ### Delegate pattern 委託模式
 
@@ -238,4 +238,13 @@ http://openhome.cc/Gossip/DesignPattern/ChainofResponsibility.htm
 但是class B也可以選擇叫class D去做，委託模式會使用聚合來代替繼承，
 如果還要新增方法的話，可以在class B中新增class E的實作。
 
-http://en.wikipedia.org/wiki/Delegation_pattern
+* http://en.wikipedia.org/wiki/Delegation_pattern
+
+### Mediator pattern 中介者模式
+
+當元件在互動時，如果彼此之間知道互相的存在，則系統在靈活度上會有所降低，或者是程式的邏輯很容易耦合，
+故將互動的程式抽取出來，產生出一個中介者，則元件在變動時，只要通知中介者，中介者再決定要去通知哪些元件以及做什麼改變即可。
+此即為中介者模式。
+
+* http://openhome.cc/Gossip/DesignPattern/MediatorPattern.htm
+* http://en.wikipedia.org/wiki/Mediator_pattern#Example
