@@ -186,7 +186,7 @@ Python中在函數前加個@decorator的功能即是decorator pattern的典範
 
 ### Strategy pattern 策略模式 (GoF23)
 
-類似Delegate mode，但是你可以選擇使用哪一種方法，
+類似Delegation mode，但是你可以選擇使用哪一種方法，
 class A會使用不同的class(實作)去做同一件事情，但是它可以選擇使用哪一種演算法實作，
 不像委託模式的地方在於，委託模式會自己決定該用哪一種方法。
 主要精神在於服務細節或演算流程的封裝，將服務或演算法封裝成一個個strategy物件，
@@ -232,12 +232,12 @@ handler連結的方式有點像是linked list的感覺，另外可以在每個ha
 
 * http://openhome.cc/Gossip/DesignPattern/ChainofResponsibility.htm
 
-### Delegate pattern 委託模式
+### Delegation pattern 委託模式
 
 就是A要做某件事情，但是他會叫class B去幫它做，但是class B其實是叫class C去做，
 但是class B也可以選擇叫class D去做，委託模式會使用聚合來代替繼承，
 如果還要新增委託的話，可以在class B中新增class E的實作。
-應該是最常見的設計模式，像是在MVC模式中中使用controller當做程式入口點，其實是用model去執行實際功能的這種概念，即為delegate pattern，
+應該是最常見的設計模式，像是在MVC模式中中使用controller當做程式入口點，其實是用model去執行實際功能的這種概念，即為delegation pattern，
 而且在實作上可以用兩個不同實作方法的model去實作同一個功能，然後在兩個model中間做抽換，也是很標準的delegation。
 
 * http://en.wikipedia.org/wiki/Delegation_pattern
