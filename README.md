@@ -48,7 +48,7 @@ Python Design Patterns
 
 * http://openhome.cc/Gossip/DesignPattern/SimpleFactory.htm
 
-### Abstract factory pattern 抽象工廠模式
+### Abstract factory pattern 抽象工廠模式 (GoF23)
 
 建立一組相同主題但是屬性有所不同的class，比如說建立正式員工和派遣員工和工讀生的class，
 他們都會擁有共同屬性，但是可能屬性值不一樣，比如說工讀生工作時間可能是4小時，正式員工是八小時，薪水可能也會有差，等等的。
@@ -60,7 +60,7 @@ abstract factory的abstract並不是一般物件導向語言中的關鍵字abstr
 
 * http://openhome.cc/Gossip/DesignPattern/AbstractFactory.htm
 
-### Factory method pattern 工廠方法模式
+### Factory method pattern 工廠方法模式 (GoF23)
 
 在一個抽象類別中留下建立元件的抽象方法沒有實作，而將這個實作方法留給實作此抽象類別的子類別，但是和元件相關的操作方法都是倚賴於預先定義的介面。
 也就是說抽象父類別只留下建立元件方法沒實作，其他的動作都預先定義好的這種時候就可以使用Factory Method。
@@ -78,7 +78,7 @@ abstract factory的abstract並不是一般物件導向語言中的關鍵字abstr
 
 * http://en.wikipedia.org/wiki/Lazy_initialization
 
-### Prototype pattern 原型模式
+### Prototype pattern 原型模式 (GoF23)
 
 在產生一個object花費的代價太高，而且沒有重新產生一次的必要性，就可以使用這個模式。
 簡單來說，就是複製一個object。
@@ -86,7 +86,7 @@ abstract factory的abstract並不是一般物件導向語言中的關鍵字abstr
 
 * http://openhome.cc/Gossip/DesignPattern/PrototypePattern.htm
 
-### Singleton pattern 單一存在模式
+### Singleton pattern 單一存在模式 (GoF23)
 
 要是這物件已經存在了，就回傳已經存在的物件。
 這個物件是只會有一個而已，絕對不會有第二個，全部人都共用這個物件。
@@ -94,7 +94,7 @@ ex: 全域物件，一個port只能有一個程式使用，Data Access Object。
 
 * http://openhome.cc/Gossip/DesignPattern/SingletonPattern.htm
 
-### Builder pattern 建造者模式
+### Builder pattern 建造者模式 (GoF23)
 
 待補
 
@@ -112,7 +112,7 @@ ex: 全域物件，一個port只能有一個程式使用，Data Access Object。
 
 ## Structural patterns 結構模式
 
-### Adapter pattern 轉接器模式
+### Adapter pattern 轉接器模式 (GoF23)
 
 比如說像是四合一讀卡機，它可以將不同的記憶卡資料，通通都轉成USB格式的資料輸出。
 或者是說轉接插頭，可以讓美國電壓轉成台灣電壓，讓台灣的電器可以使用而不過電壓太高燒壞。
@@ -124,7 +124,7 @@ adapter在概念上很像是decorator，但是在實作上可能會有差異，
 
 * http://openhome.cc/Gossip/DesignPattern/DefaultAdapter.htm
 
-### Bridge pattern 連接器模式
+### Bridge pattern 連接器模式 (GoF23)
 
 比如說一個燈座可以接不同廠牌的燈泡，你只要燈泡有符合燈座的大小就好。
 也就是說，燈座的大小就是那個規格，只要符合規格的就都可以用。
@@ -136,20 +136,20 @@ bridge模式和adapter模式的不同在於，adapter會對輸入做轉換，轉
 
 * http://openhome.cc/Gossip/DesignPattern/BridgePattern.htm
 
-### Composite pattern 組合模式
+### Composite pattern 組合模式 (GoF23)
 
 待補
 
 * http://openhome.cc/Gossip/DesignPattern/CompositePattern.htm
 
-### Flyweight pattern 小物件共用模式
+### Flyweight pattern 小物件共用模式 (GoF23)
 
 當程式中使用到大量的小物件時而這些物件又可能重複出現時，可以考慮用一個hash map將這些小字串存起來，下次如果還有用到一模一樣的物件時，
 就可以直接將hash map中儲存的物件回傳，而不用另外宣告一個物件，可有效減少記憶體使用。小物件有可能是字串或數字等等簡單的物件。
 
 * http://openhome.cc/Gossip/DesignPattern/FlyweightPattern.htm
 
-### Facade pattern 外觀(拼裝)模式
+### Facade pattern 外觀(拼裝)模式 (GoF23)
 
 將很多個API組裝在一起然後對外提供一個介面，輸入參數就可以處理好多個API，
 用以簡化操作使用。而且這樣實作就只會依賴在對外提供的那個介面而已，
@@ -157,7 +157,7 @@ bridge模式和adapter模式的不同在於，adapter會對輸入做轉換，轉
 
 * http://openhome.cc/Gossip/DesignPattern/FacadePattern.htm
 
-### Decorator pattern 裝飾模式
+### Decorator pattern 裝飾模式 (GoF23)
 
 就是給什麼東西加上個外接的東西，讓他的結果會變不一樣。比如說在輸出的結果加上另外一個物件去做處理，那這另外加的物件就是個decorator。
 ```
@@ -171,7 +171,7 @@ Python中在函數前加個@decorator的功能即是decorator pattern的典範
 
 * http://openhome.cc/Gossip/DesignPattern/DecoratorPattern.htm
 
-### Proxy pattern 代理模式
+### Proxy pattern 代理模式 (GoF23)
 
 就是你沒有權限，或者不該是你做的事情，就交給對應的窗口去處理，比如說你打去查號台，想查某個特殊的號碼，那就是你讓查號台當你的代理人。代理依照功能也會有各種不同的代理，
 
@@ -184,7 +184,7 @@ Python中在函數前加個@decorator的功能即是decorator pattern的典範
 
 ## Behavioral patterns 行為模式
 
-### Strategy pattern 策略模式
+### Strategy pattern 策略模式 (GoF23)
 
 類似Delegate mode，但是你可以選擇使用哪一種方法，
 class A會使用不同的class(實作)去做同一件事情，但是它可以選擇使用哪一種演算法實作，
@@ -194,7 +194,7 @@ class A會使用不同的class(實作)去做同一件事情，但是它可以選
 
 * http://openhome.cc/Gossip/DesignPattern/StrategyPattern.htm
 
-### Template method pattern 模板方法模式
+### Template method pattern 模板方法模式 (GoF23)
 
 在抽象父類別中(用abstract class)定義好需要用到的變數和方法，但是因為實作細節不清楚，
 所以留待子類別去實作。可有效規範子類別的介面，確保該有的函數都有。
@@ -204,14 +204,14 @@ class A會使用不同的class(實作)去做同一件事情，但是它可以選
 
 * http://openhome.cc/Gossip/DesignPattern/TemplateMethod.htm
 
-### Observer pattern 觀察者模式 (訂閱模式)
+### Observer pattern 觀察者模式 (訂閱模式) (GoF23)
 
 又可以叫做publisher-subscriber模式，簡單來說就是實作通知，事件觸發就會通知訂閱者。
 ex: epoll，MVC裡面controller會訂閱view裡面的事件，某個html元件被按到就通知JS做什麼事情。 
 
 * http://openhome.cc/Gossip/DesignPattern/ObserverPattern.htm
 
-### Command pattern 命令模式
+### Command pattern 命令模式 (GoF23)
 
 把動作當成是一個物件，於是一個物件就表示一個動作(或者是稱作命令)，
 命令物件可以把行動和參數封裝起來，這些動作可以被執行多次，或者是取消，然後再重做。
@@ -223,7 +223,7 @@ ex: epoll，MVC裡面controller會訂閱view裡面的事件，某個html元件�
 
 * http://openhome.cc/Gossip/DesignPattern/CommandPattern.htm
 
-### Chain of respondsibility pattern 責任鏈模式
+### Chain of respondsibility pattern 責任鏈模式 (GoF23)
 
 exception的處理就是此pattern的實作，如果我丟出的exception不是在這層該處理，那就是更外層的會去處理。
 但是記得不要丟太遠，不然也不好處理。
@@ -236,11 +236,13 @@ handler連結的方式有點像是linked list的感覺，另外可以在每個ha
 
 就是A要做某件事情，但是他會叫class B去幫它做，但是class B其實是叫class C去做，
 但是class B也可以選擇叫class D去做，委託模式會使用聚合來代替繼承，
-如果還要新增方法的話，可以在class B中新增class E的實作。
+如果還要新增委託的話，可以在class B中新增class E的實作。
+應該是最常見的設計模式，像是在MVC模式中中使用controller當做程式入口點，其實是用model去執行實際功能的這種概念，即為delegate pattern，
+而且在實作上可以用兩個不同實作方法的model去實作同一個功能，然後在兩個model中間做抽換，也是很標準的delegation。
 
 * http://en.wikipedia.org/wiki/Delegation_pattern
 
-### Mediator pattern 中介者模式
+### Mediator pattern 中介者模式 (GoF23)
 
 當元件在互動時，如果彼此之間知道互相的存在，則系統在靈活度上會有所降低，或者是程式的邏輯很容易耦合，
 故將互動的程式抽取出來，產生出一個中介者，則元件在變動時，只要通知中介者，中介者再決定要去通知哪些元件以及做什麼改變即可。
