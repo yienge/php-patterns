@@ -251,7 +251,7 @@ handler連結的方式有點像是linked list的感覺，另外可以在每個ha
 * http://openhome.cc/Gossip/DesignPattern/MediatorPattern.htm
 * http://en.wikipedia.org/wiki/Mediator_pattern#Example
 
-### Memento 模式 備份還原模式
+### Memento 模式 備份還原模式 (GoF23)
 
 如果應用程式可以對某些屬性進行設定或者應用程式具有狀態的情況下，可以將應用程式的設定值或是狀態備份在應用程式外部，
 利用一個外部的狀態管理員對所有的備份進行管理，並且可以從狀態管理員那裡取回備份好讓應用程式還原自己本身的狀態或者設定。
