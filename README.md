@@ -186,7 +186,7 @@ Python中在函數前加個@decorator的功能即是decorator pattern的典範
 
 ### Strategy pattern 策略模式 (GoF23)
 
-類似Delegation mode，但是你可以選擇使用哪一種方法，
+類似Delegation pattern，但是你可以選擇使用哪一種方法，
 class A會使用不同的class(實作)去做同一件事情，但是它可以選擇使用哪一種演算法實作，
 跟委託模式不同的地方在於，委託模式是找不同的物件去做，策略模式是選擇不同的演算法去做。
 主要精神在於服務細節或演算流程的封裝，將服務或演算法封裝成一個個strategy物件，
