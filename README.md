@@ -9,7 +9,7 @@ Design patterns in PHP
 
 * design patterns是工程師間觀念溝通的一種工具，常見的design patterns只要講出名稱，就可以快速地讓對方了解你想要怎麼做。
 
-* design patterns 是一種設計觀念，描述一個或多個物件的行為或是互動的方式，所以無關乎實作的語言。可以說每一種語言都可以實作出design patterns所要表達的觀念。
+* design patterns 是一種設計觀念，描述一個或多個物件的行為或是互動的方式，所以無關乎實作的語言。可以說每一種支援物件導向設計的語言都可以實作出design patterns所要表達的觀念。
 
 * design patterns 多是從現實世界中解決問題的方法虛擬化之後得到的解法，學完之後你會發現日常生活中充斥著各種pattern，生活中各種解決事情的方法都可以是一個design pattern。
 
@@ -250,3 +250,12 @@ handler連結的方式有點像是linked list的感覺，另外可以在每個ha
 
 * http://openhome.cc/Gossip/DesignPattern/MediatorPattern.htm
 * http://en.wikipedia.org/wiki/Mediator_pattern#Example
+
+### Memento 模式 備份還原模式
+
+如果應用程式可以對某些屬性進行設定或者應用程式具有狀態的情況下，可以將應用程式的設定值或是狀態備份在應用程式外部，
+利用一個外部的狀態管理員對所有的備份進行管理，並且可以從狀態管理員那裡取回備份好讓應用程式還原自己本身的狀態或者設定。
+又或者像是在編輯文件檔時，可以將文件的狀態以及內容進行備份，並且讓一個文件管理員去管理該文件的所有備份，
+如果文件編輯錯誤或者是文件不小心刪除了，也可以隨時將文件進行還原。
+
+* http://openhome.cc/Gossip/DesignPattern/MementoPattern.htm
