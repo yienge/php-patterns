@@ -268,3 +268,13 @@ handler連結的方式有點像是linked list的感覺，另外可以在每個ha
 
 * http://openhome.cc/Gossip/DesignPattern/StatePattern.htm
 * http://en.wikipedia.org/wiki/State_pattern
+
+## Iterator pattern 迭代器模式 (GoF23)
+
+對於在不同的資料結構之間，只要是像array或者list或者是set的這種可以容納多個資料的容器結構，
+我們可能都會有需要把其中的資料全部列印出來的需求，迭代器模式也由此而生，
+它的作用就是定義所有容器結構內存全部元素的存取方法。
+只要是有實作這模式的資料結構都可以使用同樣的方式去取出其中的所有資料，
+是個幾乎在每一種語言之中都有實作的一個模式。
+
+* http://openhome.cc/Gossip/DesignPattern/IteratorPattern.htm
