@@ -96,9 +96,17 @@ ex: 全域物件，一個port只能有一個程式使用，Data Access Object。
 
 ### Builder pattern 建造者模式 (GoF23)
 
-待補
+如果有個物件，需要由多個零件組合而成，而那些零件個別也都是物件需要被建立，
+而且零件之間都些許差異(材質或者大小之類的)，這時候就可以把大物件的組合方法和零件的產生方法抽分開來，
+組裝成大物件的方法就組合到director class，小零件的產生方式就組到builder class裡，
+例子1：像是我們要在遊戲之中產生隨機的迷宮，迷宮中會有很多東西，牆壁寶箱或地板之類的東西，
+那隨機產生迷宮結構的就是direcotr class，牆壁或者寶相等等的小零件就交由builder class去產生。
+這樣一來也可以製造出多種迷宮：水晶迷宮 洞穴迷宮 海底迷宮 等等，都可以共用一樣的director，而只要有不同的builder就好。
+例子2：像是文件轉換器，文件之間的差異在於可能他們所用的tag不同，或者是文件的header不同而已，但是文件整體的轉換流程是一樣的，
+那這時候文件轉換流程就是由director負責，而個別文件的產生標頭和產生tag的方式就封裝在各自的builder class裡面。
 
 * http://openhome.cc/Gossip/DesignPattern/BuilderPattern.htm
+* http://en.wikipedia.org/wiki/Builder_pattern
 
 ### Object-pool pattern 物件池模式
 
